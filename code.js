@@ -1,7 +1,8 @@
-// sayHello function
+//1, sayHello function
 function sayHello() {
-    return "say, Hello";
+    return "";
 }
+
 
 //isEven function
 function isEven(x) {
@@ -12,4 +13,4 @@ function isEven(x) {
 }
 }
 
-//
+
