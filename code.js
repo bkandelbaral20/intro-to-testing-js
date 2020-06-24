@@ -11,7 +11,7 @@ function sayHello(input) {
 
 //isEven function
 function isEven(x) {
-    if(x === 10) {
+    if(x === 2 || x === -4 || x === "8") {
     return true;
 }else{
     return false;
@@ -26,3 +26,18 @@ function isFive(x){
         return false;
     }
 }
+//  //isVowel function
+function isVowel(x) {
+    return (x === "a" || x === "A"
+     || x === "e" || x === "E");
+
+}
+// function isVowel(x) {
+//     if (x === "a,e,i,o,u".includes.toUpperCase) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+//Unit testing for a

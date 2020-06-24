@@ -49,10 +49,28 @@ describe("isEven",function(){
         expect(typeof isEven()).toBe("boolean");
     });
     it('should return true when passed value of 10', function () {
-        expect( isEven(10)).toBe(true);
+        expect( isEven(2)).toBe(true);
     });
-    it("should return false when passed the value 7",function () {
-    expect(isEven(7)).toBe(false);
+    it('should return true when passed value of -4', function () {
+        expect( isEven(-4)).toBe(true);
+    });
+    it('should return true when passed Numeric string "8" ', function () {
+        expect( isEven("8")).toBe(true);
+    });
+    it("should return false when passed the value 3",function () {
+    expect(isEven(3)).toBe(false);
+    });
+    it("should return false when passed non-numeric string",function () {
+        expect(isEven("Banana")).toBe(false);
+    });
+    it("should return false when passed Infinity",function () {
+        expect(isEven(Infinity)).toBe(false);
+    });
+    it("should return false when passed or logical operator",function () {
+        expect(isEven(true) || isEven(false) ).toBe(false);
+    });
+    it("should return false when called without an argument ",function () {
+        expect(isEven()).toBe(false);
     });
 });
 
@@ -71,3 +89,43 @@ describe("isFive",function () {
         expect(isFive("5")).toBe(false);
     });
 })
+
+//Unit test for isVowel function
+describe("isVowel", function (){
+    it('should be defined as a function', function () {
+        expect(typeof isVowel).toBe("function");
+    });
+    it("should returns a boolean ",function () {
+        expect(typeof isVowel()).toBe("boolean");
+    });
+    it('should return true when passed "a"', function () {
+        expect( isVowel("a")).toBe(true);
+    });
+    it('should return true when passed "A"', function () {
+        expect( isVowel("A")).toBe(true);
+    });
+    it("should return false when passed the value 'y' ",function () {
+        expect(isVowel("y")).toBe(false);
+    });
+    it("should return false when passed the value 4 ",function () {
+        expect(isVowel(4)).toBe(false);
+    });
+    it("should return false when called without an argument ",function () {
+        expect(isVowel()).toBe(false);
+    });
+    it("should return false when passed non-numeric string",function () {
+        expect(isVowel("Banana")).toBe(false);
+    });
+    it("should return false when passed or logical operator",function () {
+        expect(isVowel(true) || isEven(false) ).toBe(false);
+    });
+})
+
+//Unit test for add function
+// describe("add",function () {
+//     it('should defined as a function', function () {
+//         expect(typeof add).toBe("function")
+//
+//     });
+//
+// })
