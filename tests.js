@@ -121,11 +121,31 @@ describe("isVowel", function (){
     });
 })
 
-//Unit test for add function
-// describe("add",function () {
-//     it('should defined as a function', function () {
-//         expect(typeof add).toBe("function")
-//
-//     });
-//
-// })
+//Unit test for isAdd function
+describe("isAdd", function () {
+    it('should be defined as a function', function () {
+        expect(typeof isAdd).toBe("function");
+    });
+
+    it('should return the sum of two numbers', function () {
+        expect(isAdd(3 ,2)).toBe(5);
+    });
+    it("should return one numeric-string values and another number", function () {
+        expect(isAdd("5" ,6)).toBe(11);
+    });
+    it("should return two numeric-string values", function () {
+        expect(isAdd("-4" ,"10")).toBe(6);
+    });
+    it("should takes two numeric string values", function () {
+        expect(isAdd("-3" ,"-9")).toBe(-12);
+    });
+    it("should return NaN when passed non-numeric string", function () {
+        expect(isAdd("banana" ,"split")).toBeNaN();
+    });
+    it("should return NaN when passed one non-numeric string and another number", function () {
+        expect(isAdd(2 ,"apples")).toBeNaN();
+    });
+    it("should return NaN when passed no arguments", function () {
+        expect(isAdd()).toBeNaN();
+    });
+});
